@@ -1,0 +1,279 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 15vh;
+    /*background-color: rgba(0, 0, 0, 0.65); */
+    background-color: rgba(0, 0, 0, 0.98);
+    font-family: 'Yanone Kaffeesatz' ,'Poppins', sans-serif;
+    
+}
+
+#myLogo{
+    width: 160px;
+    height: 120px;
+}
+
+.navLinks2{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.nav-links a{
+    color: ghostwhite;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.nav-links li{
+    list-style: none;
+}
+.nav-links a:hover{
+    color: tomato;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: ghostwhite;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+body{
+    background-image: url(img/DK-3-2.jpg);   
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+
+.mainD{
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    padding: 60px;
+}
+.texts{
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    top: 45%;
+    left: 5%;
+    
+}
+
+.myName{
+    color: ghostwhite;
+    text-shadow: 3px 3px 5px #000;
+    font-size: 65px;
+    z-index: -1;
+    /*
+    text-align: center;
+    position: relative;
+    top: 200px;
+    right: 25%;
+    */
+}
+.underName{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.parInfo{
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.fa {
+    position: relative;
+    padding: 10px;
+    padding-top: 20px;
+    font-size: 5px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    left: -20px;
+  }
+  
+  .fa:hover {
+      opacity: 1;
+      color: tomato;
+      cursor: pointer;
+  }
+.fa-facebook{
+    background: none;
+    color: white;
+    opacity: 0.7;
+}
+.fa-instagram{
+    background: none;
+    color: white;
+    opacity: 0.7;
+}
+@media screen and (min-width:1900px){
+    .myName{
+        top: 300px;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .navLinks2{
+        width: 60%;
+    }
+    .myName{
+    font-size: 40px;
+    top: 280px;
+    right: 30%;
+    text-align: center;
+    }
+    .underName{
+        font-size: 18px;
+    }
+    .parInfo{
+        display: none;
+        font-size: 10px;
+    }
+    .fa:hover {
+        opacity: 1;
+        color: tomato;
+    }
+    
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .texts{
+        position: relative;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 90vh;
+        top: 15vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        /*transition: transform 0.5sec ease-in; */
+        z-index: 1;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+    .myName{
+    font-size: 40px;
+    top: 280px;
+    right: 25%;
+    text-align: center;
+    text-shadow: 2px 2px 6px #000;
+    
+    }
+    .underName{
+        font-size: 18px;
+    }
+    .parInfo{
+        display: none;
+        font-size: 10px;
+    }
+    .fa:hover {
+        opacity: 1;
+        color: tomato;
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+        
+    }
+}
+
+.toggle .line1{
+transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 10vh;
+    min-height: 5vh;
+    /*background-color: rgba(0, 0, 0, 0.65); */
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: 'Yanone Kaffeesatz' ,'Poppins', sans-serif;
+    
+}
+.footer p{
+    color: ghostwhite;
+    position: relative;
+    top: 10px;
+    
+    
+}
+.footLinks{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+.footLinks a{
+    color: ghostwhite;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 22px;
+    opacity: 0.7;
+    width: 40%;
+}
+.foot{
+    position: relative;
+}
+.foot a{
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    float: right;
+}
+.copyRights{  
+    position: relative;
+    float: left;
+    text-align: center;
+    bottom: 10px;
+}
+
